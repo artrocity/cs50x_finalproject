@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <!-- Quick flight search -->
+    <div class="container quick-search">
+    <h3 class="my-2 py-2">Find the Cheapest Flight</h3>
+    <form action="/flight" method="post">
+      <div class="form-row">
+        <!-- Departure -->
+        <div class="col">
+          <label for="departureCity">Departure City</label>
+          <input type="text" class="form-control" name="departureCity" placeholder="Departure">
+        </div>
+        <!-- Destination -->
+        <div class="col">
+          <label for="destinationCity">Destination City</label>
+          <input type="text" class="form-control" name="destinationCity" placeholder="Destination">
+        </div>
+        <!-- Departure Date Start -->
+        <div class="col">
+          <label for="departureDate">Departure Date</label>
+          <input type="date" class="form-control" name="departureDateStart">
+        </div>
+        <!-- Departure Date End -->
+        <div class="col">
+          <label for="returnDate">Return Date</label>
+          <input type="date" class="form-control" name="departureDateEnd">
+        </div>
+        <!-- Adults -->
+        <div class="col">
+          <label for="adults">Number of Adults</label>
+          <input type="number" class="form-control" min="1" max="10" name="adults">
+        </div>
+      </div>
+      <button class="w-40 btn btn-lg btn-primary my-3" type="submit">Search</button>
+    </form>
+  </div>
+
+
+    <!-- Hero item with top travel destinations -->
+    <div id="myCarousel" class="carousel slide py-4" data-ride="carousel">
+        <h2>Featured Destinations</h2>
+        <hr>
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide d-block w-100 img-fluid" src="https://images.unsplash.com/photo-1682695797873-aa4cb6edd613?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="First slide - picture of the great barrier reef">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>The Great Barrier Reef, Australia</h1>
+                <p class="carousel-text">With over 2300 kilometers of reef(1,400 miles), you will have the time of your life diving.</p>
+                <p><a class="btn btn-lg btn-primary" href="/flight" role="button">Book a flight</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide d-block w-100 img-fluid" src="https://images.unsplash.com/photo-1595171250522-ae1c060c288d?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Second slide - picture of plitvice lakes">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Plitvice Lakes, Croatia</h1>
+                <p class="carousel-text">If you enjoy mountains, wildlife, lakes, and waterfalls then look no further, Plitvice lakes has it all<p>
+                <p><a class="btn btn-lg btn-primary" href="/flight" role="button">Book a flight</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide d-block w-100 img-fluid" src="https://images.unsplash.com/photo-1599476160130-3af44b69ec6e?auto=format&fit=crop&q=80&w=3060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Third slide - picture of taj mahal">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Taj Mahal, India</h1>
+                <p class="carousel-text">See one of the 7 wonders of the world, the final resting place of Mumtaz Mahal, built by her husband for her, you can see the natural beauty as the light changes the appearance ever so slightly throughout the day</p>
+                <p><a class="btn btn-lg btn-primary" href="/flight" role="button">Book a flight</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+    <!-- Travel News -->
+    <h2 class="travel-news" >Travel News</h2>
+    <div class="row mb-2" id="news">
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-primary">News</strong>
+            <h3 class="mb-0">
+              <a class="text-dark" href="https://www.nerdwallet.com/article/travel/how-to-travel-safely">How to travel safely</a>
+            </h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">9 Ways to Travel More Safely (By Nerd Wallet)</p>
+            <a href="https://www.nerdwallet.com/article/travel/how-to-travel-safely">Continue reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-md-block safety" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="https://images.unsplash.com/photo-1602449204748-331279a2ed37?auto=format&fit=crop&q=80&w=3164&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-holder-rendered="true">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-success">News</strong>
+            <h3 class="mb-0">
+              <a class="text-dark" href="https://www.cbsnews.com/video/supersonic-commercial-air-travel-60-minutes-video-2022-07-10/">Supersonic Flight</a>
+            </h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="card-text mb-auto">Many of you may have heard of the famous or infamous Concorde, well now...</p>
+            <a href="https://www.cbsnews.com/video/supersonic-commercial-air-travel-60-minutes-video-2022-07-10/">Continue reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-md-block concorde" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="https://images.unsplash.com/photo-1576602861321-5b658e6dbd0c?auto=format&fit=crop&q=80&w=2989&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-holder-rendered="true">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Get the app -->
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <hr class="app-hr">
+      <h1 class="display-4 fw-bold">Download our app</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Access to a computer shouldn't stop you from receiving the best travel deals, download our free app on the Google playstore/Apple App Store</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <a href="https://play.google.com/store/games?hl=en_US&gl=US&pli=1"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 mx-2">Google Play</button></a>
+          <a href ="https://www.apple.com/app-store/"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Apple App Store</button></a>
+        </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+          <img src="https://images.unsplash.com/photo-1545132147-d037e6c54cfd?auto=format&fit=crop&q=80&w=3087&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="100" height="100" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Why Choose us -->
+    <div id="choose-us" class="bg-dark text-secondary px-4 py-5 text-center my-6">
+    <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Why choose us?</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4">With the ability to consult various different AI models allowing us to search numerous websites, we are able to provide you with the best service and prices</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="./about"><button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold mx-2">Learn more</button></a>
+            <a href="./flight"><button type="button" class="btn btn-outline-light btn-lg px-4">Book a flight</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
