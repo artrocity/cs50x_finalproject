@@ -1,0 +1,112 @@
+/* index */
+
+.quick-search {
+    height: 200px;
+    width: 80%;
+    background-image: url("https://images.unsplash.com/photo-1472552944129-b035e9ea3744?auto=format&fit=crop&q=80&w=2304&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.quick-search h3, .quick-search .form-row > .col {
+    color: white;
+}
+
+#myCarousel, #choose-us {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.travel-news {
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 0;
+}
+
+#news {
+    width: 82%;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px black;
+}
+
+.concorde, .safety {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+/* Signup/Login  */
+
+.form-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.flight_search {
+    height: 100;
+    width: 100%;
+    margin: 0;
+    background-image: url("https://images.unsplash.com/photo-1453169881280-2f4d42bc57b5?auto=format&fit=crop&q=80&w=2896&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+
+/* FAQS CSS */
+.faqs-container {
+    background-color: #007bff;
+}
+
+.faqs {
+    color: black;
+    padding: 10px;
+}
+
+
+.faqs-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.faqs-question-1 {
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.faqs-question-2 {
+    background-color: #dedbd2;
+    text-align: left;
+}
+
+.faqs-question-1, .faqs-question-2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.question, .answer {
+    padding: 5px 10px
+}
+
