@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+<div class="form-container">
+  <form action="/login" class="form-signin" method="post">
+    <img class="mb-4" src="https://images.unsplash.com/photo-1568323993144-20d546ba585d?auto=format&fit=crop&q=80&w=2809&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200" height="200">
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+    <!-- Enter username -->
+    <label for="username" class="sr-only">Enter a username</label>
+    <input autocomplete="off" type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+
+    <!-- Enter password -->
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""
+    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least: 1 number, 1 Uppercase, 1 lowercase, and be at least 8 characters long">
+    <span class="feedback" style="display: block;"></span>
+
+    <button class="btn btn-lg btn-primary btn-block my-3" type="submit">Login</button>
+    <p class="mt-5 mb-3 text-muted">© 2023 Star Travel</p>
+  </div>
+{% endblock %}
