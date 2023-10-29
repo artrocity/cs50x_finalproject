@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register with us!
+{% endblock %}
+
+{% block main %}
+    <div class="form-container">
+    <form action="/signup" class="form-signin" method="post">
+      <img class="mb-4" src="https://images.unsplash.com/photo-1545132147-d037e6c54cfd?auto=format&fit=crop&q=80&w=3087&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200" height="200">
+      <h1 class="h3 mb-3 font-weight-normal">Register with us for an account</h1>
+
+      <!-- Error for passwords not matching -->
+      {% if error %}
+      <div class="alert alert-danger">
+        {{ error }}
+      </div>
+      {% endif %}
+
+      <!-- Username -->
+      <label for="username" class="sr-only">Enter a username</label>
+      <input autocomplete="off" type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+
+      <!-- Choose a password -->
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required=""
+      required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least: 1 number, 1 Uppercase\n, 1 lowercase, and be at least 8 characters long">
+      <span id="feedback"></span>
+
+      <!-- Repeat Password -->
+      <label for="confirmation" class="sr-only">Password</label>
+      <input type="password" id="confirmation" name ="confirmation" class="form-control" placeholder="Confirm Password" required="">
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+      <p class="mt-5 mb-3 text-muted">© 2023 Star Travel</p>
+    </div>
+
+
+      <!-- Javascript -->
+      <script>
+
+        document.getElementById("inputPassword").addEventListener("input", function() {
+            var password = this.value;
+            var feedback = document.getElementById("feedback");
+
+            var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+            if (!regex.test(password)) {
+                feedback.textContent = "Password must contain: 1 number, 1 lowercase, 1 uppercase, and at least 8 characters!"
+                feedback.style.color = "red"
+            }else {
+                feedback.textContent = "Password requirements met"
+                feedback.style.color = "green"
+            }
+        })
+
+      </script>
+    </form>
+
+{% endblock %}
+
