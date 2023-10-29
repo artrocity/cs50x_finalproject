@@ -1,0 +1,6 @@
+flask
+flask-Session
+Flask-SQLAlchemy
+requests
+datetime
+pytz
