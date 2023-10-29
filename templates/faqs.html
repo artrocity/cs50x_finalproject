@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    FAQS
+{% endblock %}
+
+{% block main %}
+    <!-- Sidebar -->
+    <div class="row">
+        <div class="col-md-3">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark position-sticky" style="width: 280px;">
+        <a href="/faqs" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">FAQS</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item"><a href="#account" class="nav-link active my-1" aria-current="page">Account</a></li>
+        <li class="nav-item"><a href="#flight_search" class="nav-link active my-1" aria-current="page">Flight Search</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link active my-1" aria-current="page">Contact Us</a></li>
+        </ul>
+        <hr>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+    <!-- FAQS -->
+    <h2 class="faqs">Frequently Asked Questions</h2>
+    <hr>
+    <div class="faqs-container mx-3">
+    <!-- Account FAQS -->
+        <h3 class="faqs-header py-3" id="account">Account</h3>
+        <div class="faqs-question-1">
+            <p class="question">How do I sign up for an account?</p>
+            <p class="answer my-0">We will soon be implementing a sign up feature which will allow users to login via their own username and password which will provide you with deals and other cool features</a></p>
+        </div>
+        <div class="faqs-question-2">
+            <p class="question">Why would I want to create an account?</p>
+            <p class="answer">By creating an account, we can send you updates via email or SMS of any current sales and you can easily track your purchases via the purchase history tab in your account dashboard</p>
+        </div>
+    <!-- Flight Search FAQs -->
+        <h2 class="faqs-header" id="flight_search">Flight Search</h2>
+        <div class="faqs-question-1">
+            <p class="question">What is the difference in a City, IATA code and ICAO code?</p>
+            <div class="answer">
+                <ul>
+                    <li>City: is the city in which the airport is located</li>
+                    <li>IATA Code: (International Air Transport Association's Location Identifier), which is used to identify an airport. These are 3-letter codes</li>
+                    <li>ICAO Code: (International Civil Aviation Organization) are 4-letter identifiers designed to designate airports around the world</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faqs-question-2">
+            <p class="question">Which API is used to search for my flights?</p>
+            <p class="answer my-0">Currently, we are using the Tequilla by KIWI flight search API</p>
+        </div>
+        <div class="faqs-question-1">
+            <p class="question">Will there be an option in the future for more selection choices such as baggage, etc?</p>
+            <p class="answer">Yes, we at Star Travel are actively ensuring we stay up to date with the latest technologies and allow the user to have a variety of choices. </p>
+        </div>
+    <!-- Contact Us -->
+        <h2 class="faqs-header" id="contact">Contact Us</h2>
+        <div class="faqs-question-2">
+            <p class="question">What if I have a question that isnt answered here?</p>
+            <p class="answer">Feel free to contact us with any questions you may have via email by clicking <a href="mailto:support@star-travel.com">HERE</a></p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
